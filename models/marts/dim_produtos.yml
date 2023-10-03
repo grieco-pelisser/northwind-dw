@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: dim_produtos
+    description: Essa é a dimensão com informações dos clientes da northwind
+    columns:
+      - name: pk_produto
+        description: Essa é a chave primenria da dimensão produtos.
+        tests: 
+          - unique
+          - not_null
+                      
+      - name: id_produto
+        description: completar documentação
+        
+      - name: id_fornecedor
+        description: completar documentação
+        
+      - name: id_categoria
+        description: completar documentação
+        
+      - name: nome_produto
+        description: completar documentação
+        
+      - name: quantidade_por_unidade
+        description: Quantidade em gramas ou unidades por produto ou pacote.
+        
+      - name: preco_por_unidade
+        description: completar documentação
+        
+      - name: unidades_em_estoque
+        description: completar documentação
+        
+      - name: unidades_por_ordem
+        description: completar documentação
+        
+      - name: nivel_reabastecimento
+        description: completar documentação
+        
+      - name: is_discontinuado
+        description: completar documentação
+        
+      - name: nome_categoria
+        description: completar documentação
+        
+      - name: descricao_categoria
+        description: completar documentação
+        
+      - name: nome_fornecedor
+        description: completar documentação
+        
+      - name: contato_fornecedor
+        description: completar documentação
+        
+      - name: funcao_contato
+        description: completar documentação
+        
+      - name: endereco_fornecedor
+        description: completar documentação
+        
+      - name: cidade_fornecedor
+        description: completar documentação
+        
+      - name: regiao_fornecedor
+        description: completar documentação
+        
+      - name: pais_fornecedor
+        description: completar documentação
+        
+      - name: cep_fornecedor 
+        description: completar documentação
+        
