@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: dim_produtos
-    description: Essa é a dimensão com informações dos clientes da northwind
+    description: Essa é a dimensão com informações dos produtos da northwind
     columns:
       - name: pk_produto
         description: Essa é a chave primenria da dimensão produtos.
