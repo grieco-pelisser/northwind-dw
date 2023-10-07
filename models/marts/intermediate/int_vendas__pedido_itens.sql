@@ -14,7 +14,7 @@ with
             ordens.id_pedido
             , ordens.id_funcionario
             , ordens.id_cliente
-            , ordens.id_trasportadora
+            , ordens.id_transportadora
             , ordem_detalhes.id_produto
             , ordens.data_do_pedido
             , ordens.frete

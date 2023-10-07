@@ -14,14 +14,25 @@ with
         from {{ ref('int_vendas__pedido_itens') }}
     )
 
+    , dim_transportadoras as (
+        select *
+        from {{ ref('dim_transportadoras') }}
+    )
+
+    , dim_funcionarios as (
+        select *
+        from {{ ref('dim_funcionarios') }}
+    )
+
     , join_tabelas as (
         select
             pedidos.sk_pedido_item
             , pedidos.id_pedido
             , pedidos.id_funcionario
             , dim_clientes.pk_cliente
-            , pedidos.id_trasportadora
+            , pedidos.id_transportadora
             , dim_produtos.pk_produto
+            , dim_funcionarios.pk_funcionario
             , pedidos.data_do_pedido
             , pedidos.frete
             , pedidos.destinatario
@@ -40,11 +51,20 @@ with
             , dim_produtos.is_discontinuado
             , dim_produtos.nome_fornecedor
             , dim_clientes.nome_cliente
+            , dim_funcionarios.nome_completo_funcionario
+            , dim_funcionarios.funcao_funcionario
+            , dim_funcionarios.cidade_funcionario
+            , dim_funcionarios.pais_funcionario
+            , dim_transportadoras.nome_transportadora
         from pedido_itens as pedidos
             left join dim_produtos on
                 pedidos.id_produto = dim_produtos.id_produto
             left join dim_clientes on 
                 pedidos.id_cliente = dim_clientes.id_cliente
+            left join dim_funcionarios on
+                pedidos.id_funcionario = dim_funcionarios.id_funcionario
+            left join dim_transportadoras on
+                pedidos.id_transportadora = dim_transportadoras.id_transportadora
     )
 
     , transformacoes as (

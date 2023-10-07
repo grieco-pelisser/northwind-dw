@@ -4,7 +4,7 @@ with
             cast(order_id as int) as id_pedido
             , cast(employee_id as int) as id_funcionario
             , cast(customer_id as string) as id_cliente
-            , cast(ship_via as int) as id_trasportadora
+            , cast(ship_via as int) as id_transportadora
             , cast(order_date as date) as data_do_pedido
             , cast(freight as numeric) as frete
             , cast(ship_name as string) as destinatario
