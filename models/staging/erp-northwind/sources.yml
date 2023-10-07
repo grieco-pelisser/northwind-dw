@@ -16,3 +16,8 @@ sources:
               - unique
               - not_null
       - name: order_details
+      - name: employees
+      - name: employee_territories
+      - name: territories
+      - name: region
+      - name: shippers

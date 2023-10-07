@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dim_funcionarios
+    description: Essa é a dimensao com informações dos funcionarios da northwind
+    columns:
+      - name: pk_funcionario
+        description: Chave primaria criada para cada funcionário
+        tests:
+          - unique
+          - not_null
+
+      - name: nome_completo_funcionario
+        description: Nome completo do funcionário 
+
+      - name: id_funcionario
+        description: completar
+
+      - name: sobrenome_funcionario
+        description: completar
+
+      - name: nome_funcionario
+        description: completar
+
+      - name: funcao_funcionario
+        description: completar
+
+      - name: titulo_funcionario
+        description: completar
+
+      - name: data_nascimento_funcionario
+        description: completar
+
+      - name: data_contratacao_funcionario
+        description: completar
+
+      - name: endereco_funcionario
+        description: completar
+
+      - name: cidade_funcionario
+        description: completar
+
+      - name: cep_funcionario
+        description: completar
+
+      - name: pais_funcionario
+        description: completar
+

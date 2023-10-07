@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_transportadoras
+    description: Essa é a dimensao com informações das transportadoras da northwind
+    columns:
+      - name: pk_transportadora
+        description: Essa é a chave primaria da dimensao clientes
+        tests:
+          - unique
+          - not_null
+
+      - name: id_transportadora
+        description: a
+
+      - name: nome_transportadora
+        description: a
